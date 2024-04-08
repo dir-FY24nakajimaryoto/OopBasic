@@ -1,13 +1,14 @@
 package company;
 
-public class Employee {
+// 抽象クラス
+public abstract class Employee implements Workable{
     
     // フィールド
     protected String name; // 名前
-    private final Department department; //　部署
+    protected final Department department; //　部署(private->protected：抽象クラスのフィールドのため他クラスからのアクセスを可能に)
     private final String position; // 役職
     private final int employeeId; // 社員ID
-    public int test = 0;
+//    public int test = 0;
     
     // コンストラクタ
     public Employee(String name, Department department, String position, int employeeId) {
@@ -28,10 +29,20 @@ public class Employee {
         report(1); // 上で定義した報告メソッドを自身のクラスから呼び出す
     }
     
+    
+    // ---- 抽象メソッドに変更 ---- //
     // 会議参加メソッド
-    public void joinMeeting() {
-        department.meeting();
-        System.out.println("->上記の会議に参加します. 部署：" + department.getName() + "名前：" + name);
+    public abstract void joinMeeting();
+    
+//    public void joinMeeting() {
+//        department.meeting();
+//        System.out.println("->上記の会議に参加します. 部署：" + department.getName() + "名前：" + name);
+//    }
+    
+    // 労働メソッド
+    @Override
+    public void work() {
+        System.out.println("正社員として働きます。名前：" + name + slogan);
     }
     
 
