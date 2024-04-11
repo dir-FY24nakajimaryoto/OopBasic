@@ -8,7 +8,7 @@ public abstract class Employee implements Workable{
     protected final Department department; //　部署(private->protected：抽象クラスのフィールドのため他クラスからのアクセスを可能に)
     private final String position; // 役職
     private final int employeeId; // 社員ID
-//    public int test = 0;
+    public int test = 0;
     
     // コンストラクタ
     public Employee(String name, Department department, String position, int employeeId) {

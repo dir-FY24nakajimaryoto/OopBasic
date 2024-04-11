@@ -28,7 +28,8 @@ public class Department {
         return name;
     }
     
-    public double getBudget() {
+    public double getBudget(double uri, double si) {
+        double budget = uri - si;
         return budget;
     }
     

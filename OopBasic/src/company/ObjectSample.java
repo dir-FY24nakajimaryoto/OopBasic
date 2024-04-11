@@ -11,7 +11,7 @@ public class ObjectSample {
         
         
         // メソッドの呼び出し
-        sales.report(); // オーバーロードしたメソッドの呼び出し
+//        String aaaa = sales.report(); // オーバーロードしたメソッドの呼び出し
         sales.report(2); // 回数報告のメソッド呼び出し
         sales.joinMeeting();
 //        System.out.println("public test before: " + employee.test);
@@ -41,10 +41,12 @@ public class ObjectSample {
         // Engineerをインスタンス化したEmployee型のprojectMaangerを定義
         Employee projectManager = new Engineer("佐藤", devDepartment, 
                 "PM", 99, "Java");
+        int pm = 1;
         
         // メソッドの呼び出し
         projectManager.report();
         projectManager.joinMeeting();
+//        projectManager.developSoftware(); // Employee型なのでメソッドが未定義扱い
         // projectManagerがEngineerクラスと一致するかの確認
         if (projectManager instanceof Engineer) {
             // developSoftwareを呼び出し
